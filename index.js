@@ -1,9 +1,16 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+
+  for(let i=0; i<array.length; i++){
+    let comp = target - array[i];
+    if(array.includes(comp) && array.indexOf(comp) !== i) 
+      return true;
+  }
+  return false;
 }
 
 /* 
   Write the Big O time complexity of your function here
+  O(n)
 */
 
 /* 
